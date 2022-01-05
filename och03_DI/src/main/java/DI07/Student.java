@@ -9,6 +9,7 @@ public class Student {
 	private double weight;
 	private double height;
 	
+	// 생성자
 	public Student(String name, int age, ArrayList<String> hobbys) {
 		this.name = name;
 		this.age = age;
