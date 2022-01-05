@@ -1,9 +1,10 @@
 package DI08;
 
 import org.springframework.context.support.AbstractApplicationContext;
+
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import DI07.Student;
+import DI08.Student;
 
 public class MainClass {
 
