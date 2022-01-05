@@ -24,9 +24,6 @@ public class MainClass {
 		myCalculator.div();
 		
 		
-		
-		
-
 	}
 
 }
