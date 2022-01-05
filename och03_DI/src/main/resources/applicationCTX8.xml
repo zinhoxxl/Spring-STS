@@ -6,7 +6,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 		
 		<!--  annotation 에 있는 자료를 context로 끌어 당기기  -->
-		<!--  서로 주거니 받거니   -->
+		<!--  서로 주거니 받거니  (import 같은거) -->
 		<!--  context:annotation-config 반드시 선언!!  -->
 		<context:annotation-config></context:annotation-config>
 		  <bean class="DI08.ApplicationConfig"></bean>
