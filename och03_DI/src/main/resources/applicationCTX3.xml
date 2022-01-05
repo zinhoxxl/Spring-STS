@@ -12,11 +12,13 @@
 	         <value>4학년</value>
 	     </constructor-arg>
 	     <constructor-arg value="25번"></constructor-arg>
+	     <property name="name"><value>연아들</value></property>
 	</bean>
 	
-	<bean id="student2" class="DI03.Student">
-	      <constructor-arg value="양만춘" />
-	     <constructor-arg value="38" />
+	<bean id="student2" class="DI03.Student"> 
+	     <!-- 적는순서 바뀌면 인덱스로 타입에 맞는 순서 가리켜야함  -->
+	     <constructor-arg index="1" value="38" />
+	      <constructor-arg index="0" value="양만춘" />
 	     <constructor-arg value="3학년"/>
 	     <constructor-arg value="11번" />
 	</bean>
