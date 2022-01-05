@@ -8,7 +8,7 @@
          <property name="calculator">
              <ref bean="calculator"/>          
          </property>
-         <property name="firstNum" value="10"></property>
+         <property name="firstNum" value="20"></property>
          <property name="secondNum" value="2"></property>
     </bean>
 </beans>

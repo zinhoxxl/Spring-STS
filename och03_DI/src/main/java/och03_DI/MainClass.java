@@ -18,6 +18,7 @@ public class MainClass {
 		String configLocation = "classpath:applicationCTX.xml";
 		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLocation);		
 		MyCalculator myCalculator = ctx.getBean("myCalculator", MyCalculator.class);
+		// 이거 세줄이 MyCalculator myCalculator = new MyCalculator(); 랑 똑같음
 		myCalculator.add();
 		myCalculator.sub();
 		myCalculator.mul();
