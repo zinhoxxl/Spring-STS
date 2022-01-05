@@ -20,6 +20,7 @@ public class ApplicationConfig {
 	private String sub_adminPw;
 	
 	// 환경 파일 잡을때 사용하는 객체 PropertySourcesPlaceholderConfigurer
+	@Bean
 	public static PropertySourcesPlaceholderConfigurer Properties() { 
 	   PropertySourcesPlaceholderConfigurer configurer 
 	                     = new PropertySourcesPlaceholderConfigurer();
