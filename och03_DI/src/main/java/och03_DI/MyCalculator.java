@@ -17,5 +17,17 @@ public class MyCalculator {
 	public void div() {
 		calculator.addition(firstNum, secondNum);
 	}
+	
+	// setter만
+	public void setCalculator(Calculator calculator) {
+		this.calculator = calculator;
+	}
+	public void setFirstNum(int firstNum) {
+		this.firstNum = firstNum;
+	}
+	public void setSecondNum(int secondNum) {
+		this.secondNum = secondNum;
+	}
 
+	
 }
