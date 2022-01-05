@@ -12,12 +12,13 @@ public class MainClass {
 		System.out.println("student1 나이 : " + student1.getAge());
 		
 		System.out.println("===================================");
+		// 같은 Bean을 사용하면 같은 주소값을 가짐
 		Student student2 = ctx.getBean("student", Student.class);
 		student2.setName("강유");
 		student2.setAge(55);
 		
-		System.out.println("student2 이름 : " + student1.getName());
-		System.out.println("student2 나이 : " + student1.getAge());
+		System.out.println("student2 이름 : " + student2.getName());
+		System.out.println("student2 나이 : " + student2.getAge());
 		
 		System.out.println("===================================");
 		System.out.println("student1 이름 : " + student1.getName());
