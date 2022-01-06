@@ -7,7 +7,7 @@ public class Student {
 	private int classNum;
 	
 	public Student() {
-		System.out.println("Student 생성자 : ");
+		System.out.println("Student 생성자 ");
 	}
 	
 	public void getStudentInfo() {
@@ -16,12 +16,12 @@ public class Student {
 		System.out.println("학년 : " + getGradeNum());
 		System.out.println("반 : " + getClassNum());
 		
-		System.out.println(10/0);
-//		try {
-//			System.out.println(10/0);
-//		} catch(Exception e) {
-//			System.out.println("Student getStudentInfo + e.getmessage() ->" + e.getMessage());
-//		}
+//		System.out.println(10/0);
+		try {
+			System.out.println(10/0);
+		} catch(Exception e) {
+			System.out.println("Student getStudentInfo + e.getmessage() ->" + e.getMessage());
+		}
 		
 	}
 

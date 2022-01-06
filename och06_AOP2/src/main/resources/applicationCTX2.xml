@@ -5,6 +5,37 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 		
+		<bean id="logAop" class="aop2.LogAop" />
+		<aop:config>
+		
+		      <aop:aspect id="logger" ref="logAop">
+		          <aop:pointcut expression="within(aop2.buz.*)" id="pub"/>
+		          <aop:around method="loggerAop" pointcut-ref="pub"/>
+		     </aop:aspect>
+		     
+		     <aop:aspect id="logger" ref="logAop">
+		          <aop:pointcut expression="within(aop2.buz.*)" id="pub1"/>
+		          <aop:before method="beforeAdvice" pointcut-ref="pub1"/>
+		          <!-- pub1은 의미없고 id, pointcut-ref가 같아야함을 보여주기 위함 -->
+		     </aop:aspect>
+		     
+		     <aop:aspect id="logger" ref="logAop">
+		          <aop:pointcut expression="within(aop2.buz.*)" id="pub"/>
+		          <aop:after-returning method="afterReturningAdvice" pointcut-ref="pub"/>
+		     </aop:aspect>
+		     
+		     <aop:aspect id="logger" ref="logAop">
+		          <aop:pointcut expression="within(aop2.buz.*)" id="pub"/>
+		          <aop:after-throwing method="afterThrowingAdvice" pointcut-ref="pub"/>
+		     </aop:aspect>
+		     
+		     <aop:aspect id="logger" ref="logAop">
+		          <aop:pointcut expression="within(aop2.buz.*)" id="pub"/>
+		          <aop:after method="afterAdvice" pointcut-ref="pub"/>
+		     </aop:aspect>
+		     
+		</aop:config>
+		
 		
 		
 		<bean id="" class="aop2.buz.Student">
