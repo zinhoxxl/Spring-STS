@@ -1,4 +1,4 @@
-package och03_DI;
+package DI01;
 
 public class Calculator {
 	public void addition(int f , int s) { //call by Value

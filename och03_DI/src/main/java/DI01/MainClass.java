@@ -1,4 +1,4 @@
-package och03_DI;
+package DI01;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
