@@ -6,7 +6,7 @@ public class Student {
 	private int gradeNum;
 	private int classNum;
 	
-	public void setStudentInfo() {
+	public void getStudentInfo() {
 		System.out.println("이름 : " + getName());
 		System.out.println("나이 : " + getAge());
 		System.out.println("학년 : " + getGradeNum());

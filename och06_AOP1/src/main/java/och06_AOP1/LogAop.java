@@ -5,12 +5,14 @@ import org.aspectj.lang.ProceedingJoinPoint;
 public class LogAop {
 	// Around Advice에서 사용할 공통기능 메서드는, 대부분 파라미터로 전달받은 
 	// ProceedingJoinPoint의 proceed() 메서드만 호출
+	// Proxy(복덕방)
 	public Object loggerAop(ProceedingJoinPoint joinpoint) throws Throwable {
 		String signatureStr = joinpoint.getSignature().toString();
 		// 핵심관심사의 수행 메소드
 		System.out.println( signatureStr + " is start.");
 		long st = System.currentTimeMillis();
 		try {
+			// 핵심관심사를 수행시킴
 			Object obj = joinpoint.proceed();
 			return obj;
 		} finally {
