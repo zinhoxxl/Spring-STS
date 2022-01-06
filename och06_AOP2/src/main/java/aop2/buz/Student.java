@@ -5,28 +5,27 @@ public class Student {
 	private int age;
 	private int gradeNum;
 	private int classNum;
-	
+
 	public Student() {
-		System.out.println("Student 생성자 ");
+		System.out.println("Student 생성자");
 	}
-	
+
 	public void getStudentInfo() {
 		System.out.println("이름 : " + getName());
 		System.out.println("나이 : " + getAge());
 		System.out.println("학년 : " + getGradeNum());
 		System.out.println("반 : " + getClassNum());
 		
-//		System.out.println(10/0);
+	//	System.out.println(10/0);
 		try {
 			System.out.println(10/0);
-		} catch(Exception e) {
-			System.out.println("Student getStudentInfo + e.getmessage() ->" + e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Student getStudentInfo +e.getMessage()->"+e.getMessage());
 		}
-		
 	}
-
 	
-	//getter / setter
+
+	// getter / setter
 	public String getName() {
 		return name;
 	}
@@ -60,6 +59,5 @@ public class Student {
 	}
 	
 	
-
 }
 
