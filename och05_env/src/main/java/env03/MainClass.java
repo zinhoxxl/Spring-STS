@@ -6,9 +6,9 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		System.out.println("1 Run");
+		// config 생성 클래스를 이걸 통해서 컨테이너 생성후 로딩이 가능!!!
 		AnnotationConfigApplicationContext ctx 
 		                 = new AnnotationConfigApplicationContext(ApplicationConfig.class);
-		
 		System.out.println("4 adminConfig Before Run");
 		AdminConnection connection = ctx.getBean("adminConfig", AdminConnection.class);
 		System.out.println("5 adminConfig After Run");
