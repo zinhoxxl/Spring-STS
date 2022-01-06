@@ -9,7 +9,7 @@ public class LogAop {
 		// ProceedingJoinPoint의 proceed() 메서드만 호출
 		// Proxy(복덕방)
 		public Object loggerAop(ProceedingJoinPoint joinpoint) throws Throwable {
-			String signatureStr = joinpoint.getSignature().toString();
+			String signatureStr = joinpoint.getSignature().toShortString();
 			// 핵심관심사의 수행 메소드
 			System.out.println( signatureStr + " is start.");
 			long st = System.currentTimeMillis();
