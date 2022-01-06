@@ -18,7 +18,6 @@ public class LogAop {
 		String signatureStr = joinpoint.getSignature().toShortString();
 		System.out.println( signatureStr + "is start.");
 		long st = System.currentTimeMillis();
-		
 		try {
 			Object obj = joinpoint.proceed();
 			return obj;
