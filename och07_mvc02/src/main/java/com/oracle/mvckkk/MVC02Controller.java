@@ -1,4 +1,4 @@
-package com.oracle.mvc02;
+package com.oracle.mvckkk;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

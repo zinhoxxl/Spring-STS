@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Handles requests for the application home page.
@@ -46,13 +47,24 @@ public class HomeController {
 		return "board/view";
 	}
 	
-	
+	// 이건 파라미터
 	@RequestMapping("/board/content")
 	public String content(Model model) {
 		System.out.println("content controller sysout board/view");
 		
 		model.addAttribute("id", 30);
 		return "board/content";
+	}
+	
+	// Model and View 매우 중요함!!!  (리턴형, 객체 자체를 리턴!)
+	@RequestMapping("/board/reply")
+	public ModelAndView reply() {
+		
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("id", 30);
+		mv.setViewName("board/reply");
+		
+		return mv;
 	}
 	
 	
