@@ -46,4 +46,14 @@ public class HomeController {
 		return "board/view";
 	}
 	
+	
+	@RequestMapping("/board/content")
+	public String content(Model model) {
+		System.out.println("content controller sysout board/view");
+		
+		model.addAttribute("id", 30);
+		return "board/content";
+	}
+	
+	
 }
