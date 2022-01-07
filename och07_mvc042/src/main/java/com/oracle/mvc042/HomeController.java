@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -44,11 +45,19 @@ public class HomeController {
 		return "index";
 	}
 	
-	
-	@RequestMapping("/studentView")
-	public String studentView(@ModelAttribute("studentInfo") StudentInformation studentInformation) {
+	// 방법1
+	@RequestMapping("/studentView1")
+	public String studentView1(@ModelAttribute("studentInfo") StudentInformation studentInformation) {
 		System.out.println("HomeController studentView Start...");
 		//return "studentView";
+		return "studentView2";
+	}
+	
+	// 방법2
+	@RequestMapping("/studentView2")
+	public String studentView2(StudentInformation studentInformation, Model model){
+		System.out.println("HomeController studentView Start...");
+		model.addAttribute("studentInfo", studentInformation);
 		return "studentView2";
 	}
 	
