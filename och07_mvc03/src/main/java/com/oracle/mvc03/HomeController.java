@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Handles requests for the application home page.
@@ -49,6 +50,18 @@ public class HomeController {
 		model.addAttribute("id", id);
 		model.addAttribute("pw", pw);
 		return "board/confirmId";
+	}
+	
+	
+	@RequestMapping("board/checkId")
+	public String checkId(@RequestParam("id") String idd, 
+			              @RequestParam("pw") int pswd, 
+			              Model model) {
+		System.out.println("Controller checkId id -> " + idd);
+		System.out.println("Controller checkId pw -> " + pswd);
+		model.addAttribute("identify", idd);
+		model.addAttribute("password", pswd);
+		return "board/checkId";
 	}
 	
 	
