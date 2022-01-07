@@ -1,10 +1,8 @@
-package com.oracle.mvc041;
+package com.oracle.mvc042;
 
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
-
-import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Handles requests for the application home page.
@@ -39,32 +36,11 @@ public class HomeController {
 		return "home";
 	}
 	
+	
 	@RequestMapping("/index")
 	public String goIndex() {
 		System.out.println("controller Index Start...");
 		return "index";
-	}
-	
-	// 방법1.
-	@RequestMapping(method = RequestMethod.GET, value = "/student")
-	public String goStudent(HttpServletRequest request, Model model) {
-		System.out.println("RequestMethod.GET");
-		String id = request.getParameter("id");
-		System.out.println("GET id : " + id);
-		model.addAttribute("studentId", id);
-		return "student/studentId";
-	}
-	
-	// 방법2.
-	@RequestMapping(method = RequestMethod.POST, value = "/student")
-	public ModelAndView goStudent(HttpServletRequest request) {
-		System.out.println("RequestMethod.GET");
-		String id = request.getParameter("id");
-		System.out.println("POST id : " + id);
-		ModelAndView mv = new ModelAndView(); // POST방식이라고 모델앤뷰 쓴거 아님!!
-		mv.setViewName("student/studentId");
-		mv.addObject("studentId", id);
-		return mv;
 	}
 	
 }
