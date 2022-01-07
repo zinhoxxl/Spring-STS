@@ -36,4 +36,13 @@ public class HomeController {
 		return "home"; 
 	}
 	
+	
+	@RequestMapping(value = "/board/view")
+	public String view() {
+		logger.info("Logger board/view Start..."); // 관등성명 대주니까 에러추적하기도 편하고 좋은방법
+		System.out.println("sysout board/view"); // 이렇게만 하면 에러발생시 찾기 힘듬
+		
+		return "board/view";
+	}
+	
 }
