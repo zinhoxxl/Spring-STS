@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Handles requests for the application home page.
  */
+// 디스패치 서블릿이 부를수 있는 컨트롤러
 @Controller
 public class HomeController {
 	
