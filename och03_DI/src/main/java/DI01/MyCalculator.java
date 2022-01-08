@@ -9,13 +9,13 @@ public class MyCalculator {
 		calculator.addition(firstNum, secondNum);
 	}
 	public void sub() {
-		calculator.addition(firstNum, secondNum);
+		calculator.subtraction(firstNum, secondNum);
 	}
 	public void mul() {
-		calculator.addition(firstNum, secondNum);
+		calculator.multiplication(firstNum, secondNum);
 	}
 	public void div() {
-		calculator.addition(firstNum, secondNum);
+		calculator.division(firstNum, secondNum);
 	}
 	
 	// setter만

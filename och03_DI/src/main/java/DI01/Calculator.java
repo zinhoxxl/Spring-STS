@@ -19,7 +19,7 @@ public class Calculator {
 	public void division(int f , int s) { //call by Value
 		System.out.println("division()");
 		int result = f / s;
-		System.out.println(f + " / " + s + "=" + result);
+		System.out.println(f + " / " + s + " = " + result);
 	}
 
 }
