@@ -20,7 +20,7 @@ public class AdminConnection implements InitializingBean, DisposableBean {
 	// getter / setter
 	public String getAdminId() {
 		return adminId;
-	}
+	} 
 
 	public void setAdminId(String adminId) {
 		this.adminId = adminId;

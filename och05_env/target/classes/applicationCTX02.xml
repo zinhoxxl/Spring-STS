@@ -6,9 +6,11 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 		
 		<!--  import 했다~ 생각하자  -->
+		<!--  property-placeholder는 위치를 말한다    classpath:는 resources를 뜻함     이두개의 파일 을 임포트 한거 같은것임  -->         
 		<context:property-placeholder location="classpath:admin2.properties, classpath:sub_admin2.properties" />
         
         <!--  이게 DI !!!! 쉽지? -->
+        <!-- 얘네를 호출하면 알아서 setter를 통해서 값이 들어감  -->
         <bean id="adminConnection" class="env02.AdminConnection">
             <property name="adminId">
                <value>${admin.id}</value> <!-- EL표기법  -->
