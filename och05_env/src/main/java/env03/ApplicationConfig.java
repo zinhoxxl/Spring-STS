@@ -7,7 +7,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
-@Configuration
+@Configuration   // 어노테이션
 public class ApplicationConfig { //XML역할
 	
 	@Value("${admin.id}") //EL표기법, 요게
