@@ -52,7 +52,7 @@ public class HomeController {
 		String id = request.getParameter("id");
 		System.out.println("GET id : " + id);
 		model.addAttribute("studentId", id);
-		return "student/studentId";
+		return "student/studentId";   
 	}
 	
 	// 방법2.
