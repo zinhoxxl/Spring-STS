@@ -39,9 +39,12 @@
 
 	<!-- Processes application requests -->
 	<servlet>
+	    <!-- 서블릿 즉 컨트롤러  -->
 		<servlet-name>appServlet</servlet-name>
+		<!-- DispatcherServlet이 핸들링해서 컨트롤러로 보내줄것이다  -->
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
+		    <!-- 컨트롤러만들때 받은 파라미터  servlet-context.xml-->
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
 		</init-param>
