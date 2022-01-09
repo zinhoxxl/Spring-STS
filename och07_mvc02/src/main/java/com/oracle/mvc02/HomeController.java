@@ -24,18 +24,21 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+	
+	// 뷰의 요청 경로 지정
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
+		// 로직 수행
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
 		String formattedDate = dateFormat.format(date);
 		
+		// Model 객체를 이용해서, Data전달
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home"; 
+		return "home"; // view파일 리턴
 	}
 	
 	
@@ -60,11 +63,12 @@ public class HomeController {
 	@RequestMapping("/board/reply")
 	public ModelAndView reply() {
 		
-		ModelAndView mv = new ModelAndView();
-		mv.addObject("id", 30);
-		mv.setViewName("board/reply");
+		// 데이터와 뷰를 동시에 설정이 가능
+		ModelAndView mv = new ModelAndView(); // 객체를 선언 및 생성
+		mv.addObject("id", 30); // 뷰로 보낼 데이터 값
+		mv.setViewName("board/reply"); // 뷰의 이름
 		
-		return mv;
+		return mv; // 객체 반환
 	}
 	
 	
