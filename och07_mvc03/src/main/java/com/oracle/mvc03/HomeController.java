@@ -79,7 +79,7 @@ public class HomeController {
 		member.setId(id);
 		member.setPw(pw);
 		member.setEmail(email);
-		
+		// member에다가 저장해서 한꺼번에 데이터를 넘김
 		model.addAttribute("member", member);
 		return "member/join";
 	}
