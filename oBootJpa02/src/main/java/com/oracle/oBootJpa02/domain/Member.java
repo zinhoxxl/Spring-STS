@@ -37,7 +37,7 @@ public class Member {
 	@Column(name = "user_name", length = 50)
 	private String name;
 	
-	// FK
+	// FK    (fk가 있는쪽에서 거는거 즉 다대일 이 권장임)
 	@ManyToOne
 	@JoinColumn(name = "team_id")
 	private Team team;

@@ -10,7 +10,7 @@ import com.oracle.oBootJpa02.domain.Member;
 import com.oracle.oBootJpa02.repository.MemberRepository;
 
 @Service
-@Transactional
+@Transactional     //JPA 에서는 서비스단위로 트랜젝션 끊어주기
 public class MemberService {
 	private final MemberRepository memberRepository;
 	@Autowired

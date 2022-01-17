@@ -8,7 +8,7 @@ import com.oracle.oBootJpa02.domain.Member;
 import com.oracle.oBootJpa02.domain.Team;
 
 public class JpaMemberRepository implements MemberRepository {
-	private final EntityManager em;
+	private final EntityManager em;  // JPA
 	
 	public JpaMemberRepository(EntityManager em) {
 		this.em = em;
@@ -20,14 +20,14 @@ public class JpaMemberRepository implements MemberRepository {
 		Team team = new Team();
 		team.setName(member.getTeamname());
 		em.persist(team);
-		// 회원 저장
+		// 회원 저장  (팀을 저장 하고 그 팀을 회원에 저장)
 		member.setTeam(team); //단방향 연관관계 설정, 참조 저장
 		em.persist(member);
 		return member;
 	}
 
 	@Override
-	public List<Member> findAll() {
+	public List<Member> findAll() {                          // 테이블이 아니라 객체 Member
 		List<Member> memberList = em.createQuery("select m from Member m", Member.class)
 				                  .getResultList();
 		return memberList;
